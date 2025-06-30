@@ -145,3 +145,40 @@
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 420px) {
+  .login-popup-container {
+    padding: 18px 16px;
+    border-radius: 10px;
+    max-width: 95%;
+    gap: 18px;
+  }
+
+  .login-popup-title h2 {
+    font-size: 1.4rem;
+  }
+
+  .login-popup-title img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .login-popup-inputs input {
+    font-size: 0.9rem;
+    padding: 9px;
+  }
+
+  .login-popup-container button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .login-popup-condition {
+    font-size: 0.85rem;
+    gap: 8px;
+  }
+
+  .login-popup-toggle {
+    font-size: 0.85rem;
+  }
+}

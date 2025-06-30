@@ -1,9 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { StoreContext } from '../../context/StoreContext';
-import './PlaceOrder.css'; // optional if you're styling this
+import './PlaceOrder.css';
 
 const PlaceOrder = () => {
   const { getTotalCartAmount } = useContext(StoreContext);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const getDeliveryFee = () => {
     return getTotalCartAmount() > 0 ? 20 : 0;
@@ -15,8 +19,6 @@ const PlaceOrder = () => {
 
   return (
     <form className='place-order'>
-      
-      {/* LEFT SIDE - Delivery Form */}
       <div className='place-order-left'>
         <p className='title'>Delivery Information</p>
         <div className="multi-fields">
@@ -36,7 +38,6 @@ const PlaceOrder = () => {
         <input type='text' placeholder='Phone' />
       </div>
 
-      {/* RIGHT SIDE - Cart Total */}
       <div className="place-order-right">
         <div className='cart-total'>
           <h2>Cart Total</h2>
@@ -59,7 +60,6 @@ const PlaceOrder = () => {
           </button>
         </div>
       </div>
-
     </form>
   );
 };

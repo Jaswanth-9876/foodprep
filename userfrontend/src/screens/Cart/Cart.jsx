@@ -1,12 +1,17 @@
-import React, { useContext } from 'react';
-import {useNavigate} from 'react-router-dom'
+import React, { useContext, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
 import './Cart.css';
 import { assets } from '../../assets/assets';
 
 const Cart = () => {
   const { cartItems, food_list, addToCart, removeFromCart } = useContext(StoreContext);
-  const navigate=useNavigate()
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const getTotalCartAmount = () => {
     let total = 0;
     for (let itemId in cartItems) {
@@ -20,12 +25,10 @@ const Cart = () => {
     return total;
   };
 
-
   const getDeliveryFee = () => {
     return getTotalCartAmount() > 0 ? 20 : 0;
   };
 
- 
   const getFinalTotal = () => {
     return getTotalCartAmount() + getDeliveryFee();
   };

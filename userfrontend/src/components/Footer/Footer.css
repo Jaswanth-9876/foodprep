@@ -149,3 +149,59 @@
     font-size: 1.2rem;
   }
 }
+
+@media (max-width: 420px) {
+  .footer {
+    padding: 30px 4vw 15px;
+    margin-top: 60px;
+    gap: 24px;
+  }
+
+  .footer-content {
+    gap: 30px;
+  }
+
+  .footer-left img {
+    width: 120px;
+    margin-bottom: 12px;
+  }
+
+  .footer-left p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+
+  .footer-social-icons {
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .footer-social-icons img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer-center h2,
+  .footer-right h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-center li,
+  .footer-right li {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .footer hr {
+    height: 1px;
+    margin: 16px 0;
+  }
+
+  .footer-bottom {
+    font-size: 1.1rem;
+    padding-top: 8px;
+  }
+}
+
