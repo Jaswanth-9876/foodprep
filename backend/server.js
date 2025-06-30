@@ -13,8 +13,7 @@ app.use("/image",express.static('uploads'))
 
 connectDB()
 
-//routes
-//api endpoints
+
 app.use('/api/food',require('./routes/foodRouter'))
 app.use('/api/user',require('./routes/userRouter'))
 app.use('/api/cart',require('./routes/cartRouter'))
